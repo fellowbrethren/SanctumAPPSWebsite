@@ -4,18 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#180d22">
-  <meta name="description" content="Discover SanctumDO, a private offline personal organiser that syncs accross your devices, and SanctumSTUDY, a study app with built-in Artificial Intelligence (AI) designed to help you go deeper into studying the Word of God. Coming soon from SanctumAPPS.">
+  <meta name="description" content="Discover SanctumSTUDY, a study app with built-in Artificial Intelligence (AI) designed to help you go deeper into studying the Word of God and SanctumDO, a private offline personal organiser that syncs accross your devices. Coming soon from SanctumAPPS.">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:creator" content="SanctupAPPS">
   <meta name="twitter:title" content="SanctumDO & SanctumSTUDY | Built by SanctumAPPS">
   <meta name="twitter:description" content="Thoughtfully built for a more intentional life.">
 
-  <meta property="og:title" content="SanctumDO & SanctumSTUDY | Built by SanctumAPPS">
+  <meta property="og:title" content="SanctumSTUDY & SanctumDO | Built by SanctumAPPS">
   <meta property="og:site_name" content="SanctumAPPS">
-  <meta property="og:description" content="Discover SanctumDO, a private offline personal organiser that syncs accross your devices, and SanctumSTUDY, a study app with built-in Artificial Intelligence (AI) designed to help you go deeper into studying the Word of God. Coming soon from SanctumAPPS.">
+  <meta property="og:description" content="Discover SanctumSTUDY, a study app with built-in Artificial Intelligence (AI) designed to help you go deeper into studying the Word of God and SanctumDO, a private offline personal organiser that syncs accross your devices. Coming soon from SanctumAPPS.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.sanctumapps.com">
+  <meta property="og:url" content="https://www.sanctumapps.com/">
+  <meta property="og:image" content="https://www.sanctumapps.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SanctumAPPS - SanctumSTUDY & SanctumDO">
 
   <title>SanctumAPPS | SanctumSTUDY & SanctumDO</title>
 
@@ -28,7 +32,7 @@
   <link rel="shortcut icon" href="https://sanctumapps.com/favicon.ico" type="image/x-icon" />
   <link rel="mask-icon" href="https://sanctumapps.com/favicon.svg" color="#410061" />
 
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
 
   <script type="application/ld+json">
   {
@@ -41,21 +45,21 @@
       },
       {
         "@type": "SoftwareApplication",
-        "name": "SanctumDO",
-        "applicationCategory": "ProductivityApplication",
-        "description": "A private, offline personal organiser designed to keep your life organised while keeping your data on your own devices.",
-        "operatingSystem": "Android, iOS, Windows",
-        "brand": {
-          "@type": "Brand",
-          "name": "Sanctum"
-        }
-      },
-      {
-        "@type": "SoftwareApplication",
         "name": "SanctumSTUDY",
         "applicationCategory": "EducationalApplication",
         "description": "A Bible study app with built in AI tools designed to help you explore Scripture, understand its meaning and grow deeper in your faith.",
         "operatingSystem": "Android, iOS",
+        "brand": {
+          "@type": "Brand",
+          "name": "Sanctum"
+        }
+      },      
+      {
+        "@type": "SoftwareApplication",
+        "name": "SanctumDO",
+        "applicationCategory": "ProductivityApplication",
+        "description": "A private, offline personal organiser designed to keep your life organised while keeping your data on your own devices.",
+        "operatingSystem": "Android, iOS, Windows",
         "brand": {
           "@type": "Brand",
           "name": "Sanctum"
@@ -66,11 +70,19 @@
   </script>
 </head>
 
-<body>
+<body class="homepage">
   <div class="page">
-    <header>
-      <div class="brand">SanctumAPPS</div>
-      <div class="header-status">Coming soon</div>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="/" class="nav-brand">SanctumAPPS</a>
+          <a href="./SanctumSTUDY/" class="nav-link">SanctumSTUDY</a>
+          <a href="./SanctumDO/" class="nav-link">SanctumDO</a>
+        </nav>
+
+        <div class="header-status">Coming soon</div>
+      </div>
     </header>
 
     <main>
@@ -81,30 +93,35 @@
       </section>
 
       <section class="apps" aria-label="Sanctum apps">
-        <article class="app study">
-          <div class="logo-wrap"><img src="SanctumSTUDY-logo.png" alt="SanctumSTUDY"></div>
-          <div class="details">
-            <h2>SanctumSTUDY</h2>
-            <p class="tagline">Go deeper. Understand more. Live the Word.</p>
-            <p>A Bible study app designed to help you explore Scripture, understand its meaning and go deeper in the Word of God.</p>
-            <div class="status">Coming soon</div>
-          </div>
-        </article>
-        <article class="app do">
-          <div class="logo-wrap"><img src="SanctumDO-logo.png" alt="SanctumDO"></div>
-          <div class="details">
-            <h2>SanctumDO</h2>
-            <p class="tagline">Your life. Your data. Your devices.</p>
-            <p>A private, offline personal organiser designed to keep your life organised while keeping your data on your devices.</p>
-            <div class="status">Coming soon</div>
-          </div>
-        </article>
+        <a href="./SanctumSTUDY/" class="whitelink">
+          <article class="app study">
+            <div class="logo-wrap"><img src="./assets/images/logos/SanctumSTUDY-logo.png" alt="SanctumSTUDY"></div>
+            <div class="details">
+              <h2>SanctumSTUDY</h2>
+              <p class="tagline">Go deeper. Understand more. Live the Word.</p>
+              <p>A Bible study app designed to help you explore Scripture, understand its meaning and go deeper in the Word of God.</p>
+              <div class="status">Coming soon</div>
+            </div>
+          </article>
+        </a>
+        <a href="./SanctumSTUDY/" class="whitelink">
+          <article class="app do">
+            <div class="logo-wrap"><img src="./assets/images/logos/SanctumDO-logo.png" alt="SanctumDO"></div>
+            <div class="details">
+              <h2>SanctumDO</h2>
+              <p class="tagline">Your life. Your data. Your devices.</p>
+              <p>A private, offline personal organiser designed to keep your life organised while keeping your data on your devices.</p>
+              <p> &nbsp; </p>
+              <div class="status">Coming soon</div>
+            </div>
+          </article>
+        </a>
       </section>
     </main>
 
     <footer>
-      <span>© 2026 SanctumAPPS</span>
-      <span>Made with purpose.</span>
+      <span>© 2026 SanctumAPPS &nbsp;</span>
+      <span> &nbsp; Made with purpose.</span>
     </footer>
   </div>
 </body>

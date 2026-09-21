@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#180d22">
-  <meta name="description" content="Discover SanctumSTUDY, a study app with local, built-in Artificial Intelligence (AI) designed to help you go deeper into studying the Word of God and SanctumDO, a private offline personal organiser that syncs accross your devices. Coming soon from SanctumAPPS.">
+  <meta name="description" content="Discover SanctumSTUDY, a study app with built-in Artificial Intelligence (AI) designed to help you go deeper into studying the Word of God and SanctumDO, a private offline personal organiser that syncs accross your devices. Coming soon from SanctumAPPS.">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:creator" content="SanctupAPPS">
@@ -22,7 +22,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:secure_url" content="https://www.sanctumapps.com/assets/images/og-image.jpg">
-  
+
   <title>SanctumAPPS | SanctumSTUDY & SanctumDO</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,6 +70,7 @@
     ]
   }
   </script>
+
 </head>
 
 <body class="homepage">
@@ -77,6 +78,7 @@
 
     <header class="site-header">
       <div class="header-inner">
+
         <nav class="main-nav" aria-label="Main navigation">
           <a href="/" class="nav-brand">SanctumAPPS</a>
           <a href="./SanctumSTUDY/" class="nav-link">SanctumSTUDY</a>
@@ -84,8 +86,27 @@
         </nav>
 
         <div class="header-status">Coming soon</div>
+
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
       </div>
     </header>
+
+    <div class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+
+      <nav aria-label="Mobile navigation">
+        <a href="/" class="nav-brand">SanctumAPPS</a>
+        <a href="./SanctumSTUDY/" class="nav-link">SanctumSTUDY</a>
+        <a href="./SanctumDO/" class="nav-link">SanctumDO</a>
+      </nav>
+
+      <div class="mobile-menu-status">Coming soon</div>
+    </div>
 
     <main>
       <section class="intro">
@@ -126,6 +147,33 @@
       <span> &nbsp; Made with purpose.</span>
     </footer>
   </div>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuClose = document.querySelector('.mobile-menu-close');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('menu-open');
+    });
+
+    menuClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      });
+    });
+  </script>
+    
 </body>
 
 </html>

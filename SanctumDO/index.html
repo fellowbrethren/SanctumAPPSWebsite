@@ -71,15 +71,35 @@
 
     <header class="site-header">
       <div class="header-inner">
+
         <nav class="main-nav" aria-label="Main navigation">
-          <a href="../" class="nav-brand">SanctumAPPS</a>
-          <a href="../SanctumSTUDY/" class="nav-link">SanctumSTUDY</a>
-          <a href="../SanctumDO/" class="nav-link">SanctumDO</a>
+          <a href="/" class="nav-brand">SanctumAPPS</a>
+          <a href="./SanctumSTUDY/" class="nav-link">SanctumSTUDY</a>
+          <a href="./SanctumDO/" class="nav-link">SanctumDO</a>
         </nav>
 
         <div class="header-status">Coming soon</div>
+
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
       </div>
     </header>
+
+    <div class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+
+      <nav aria-label="Mobile navigation">
+        <a href="/" class="nav-brand">SanctumAPPS</a>
+        <a href="./SanctumSTUDY/" class="nav-link">SanctumSTUDY</a>
+        <a href="./SanctumDO/" class="nav-link">SanctumDO</a>
+      </nav>
+
+      <div class="mobile-menu-status">Coming soon</div>
+    </div>
 
     <main>
       <div class="hero">
@@ -100,5 +120,32 @@
       <span> &nbsp; Made with purpose.</span>
     </footer>
   </div>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuClose = document.querySelector('.mobile-menu-close');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('menu-open');
+    });
+
+    menuClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      });
+    });
+  </script>
+
 </body>
 </html>
